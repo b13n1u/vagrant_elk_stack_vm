@@ -1,0 +1,3 @@
+# vagrant_elk_stack #
+
+This is the vagrant_elk_stack module. It provides...
