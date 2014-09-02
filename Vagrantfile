@@ -7,7 +7,7 @@ VAGRANTFILE_API_VERSION = "2"
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "hashicorp/precise64"
   config.vm.provision "shell", inline: "echo Welcome to ELK stack VM find help under: "
-  config.vm.provision :shell, :inline => "sudo apt-get update && sudo apt-get install puppet -y"
+  config.vm.provision :shell, :inline => "sudo apt-get update && sudo apt-get install puppet -y"    #fix augeas issue
    
   #vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant-root", "1"]
   #vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
