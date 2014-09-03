@@ -5,7 +5,8 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "hashicorp/precise64"
+  config.vm.box = "ubuntu/trusty64"
+#  config.vm.box = "puppetlabs/centos-6.5-64-puppet"
   config.vm.provision "shell", inline: "echo Welcome to ELK stack VM find help under: "
   config.vm.provision :shell, :inline => "sudo apt-get update && sudo apt-get install puppet -y"    #fix augeas issue
  # config.vm.provision :shell, :inline => "mkdir /es-data"

@@ -17,13 +17,26 @@ class { 'logstash':
   status  => 'enabled',
   restart_on_change => false,    #Under normal circumstances a modification to the Logstash configuration will trigger a restart of the service.
   install_contrib => true,      #install contrib plugins
+#  init_defaults_file => 'puppet:///modules/vagrant_elk_stack/logstash'
+  
 }
 
-logstash::configfile { 'logstash_conf':
-#  source => 'puppet:///modules/logstash/logstash.conf',
-   content => template("vagrant_elk_stack/logstash.conf"),     #stupid bug in module !!
-   order  => 20
+logstash::configfile { 'input_conf':
+  source => 'puppet:///modules/vagrant_elk_stack/input.conf',
+#   content => template("vagrant_elk_stack/input.conf"),     #stupid bug in module !!
+   order  => 10
  }
 
+logstash::configfile { 'filter_conf':
+  source => 'puppet:///modules/vagrant_elk_stack/filter.conf',
+#   content => template("vagrant_elk_stack/filter.conf"),     #stupid bug in module !!
+   order  => 20
+ }
+ 
+logstash::configfile { 'output_conf':
+  source => 'puppet:///modules/vagrant_elk_stack/output.conf',
+#   content => template("vagrant_elk_stack/output.conf"),     #stupid bug in module !!
+   order  => 30
+}
 
 }#END
