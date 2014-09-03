@@ -8,6 +8,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.box = "hashicorp/precise64"
   config.vm.provision "shell", inline: "echo Welcome to ELK stack VM find help under: "
   config.vm.provision :shell, :inline => "sudo apt-get update && sudo apt-get install puppet -y"    #fix augeas issue
+ # config.vm.provision :shell, :inline => "mkdir /es-data"
    
   #vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/vagrant-root", "1"]
   #vb.customize ["setextradata", :id, "VBoxInternal2/SharedFoldersEnableSymlinksCreate/v-root", "1"]
@@ -18,8 +19,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # config.vm.box_check_update = false
 
   config.vm.network "forwarded_port", guest: 80, host: 8888
+  config.vm.network "forwarded_port", guest: 9200, host: 9200
 
-  # config.vm.network "private_network", ip: "10.0.0.101"
+  config.vm.network "private_network", ip: "10.0.0.111"
 
   # Create a public network, which generally matched to bridged network.
   # Bridged networks make the machine appear as another physical device on
@@ -32,9 +34,24 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # the path on the host to the actual folder. The second argument is
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
-#  config.vm.synced_folder "../data", "/vagrant_data"
+  #config.vm.synced_folder "etc/elasticsearch", "/etc/elasticsearch"
 
+  # config.vm.synced_folder "./etc/elasticsearch", "/etc/elasticsearch", id: "elasticsearch_config", create: true,
+   # owner: "elasticsearch",
+   # group: "elasticsearch",
+   # mount_options: ["dmode=775,fmode=664"]
+   
+  # config.vm.synced_folder "./etc/logstash", "/etc/logstash", id: "logstash_config", create: true,
+   # owner: "root",
+   # group: "root",
+   # mount_options: ["dmode=775,fmode=664"]
 
+   #config.vm.synced_folder "./es-index", "/vagrant/es-index", id: "elasticsearch_index", create: true,
+   #owner: "elasticsearch",
+   #group: "elasticsearch",
+   #mount_options: ["dmode=775,fmode=664"]
+
+   
   config.vm.provider "virtualbox" do |vb|
      # Don't boot with headless mode
   	#   vb.gui = true

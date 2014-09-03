@@ -1,9 +1,9 @@
 #TODO: add config, prepare the directories 
-
 class vagrant_elk_stack {
 
 include vagrant_elk_stack::elastic
 include vagrant_elk_stack::logst
+include vagrant_elk_stack::kiban
 include apt 
 
 #pkgs which may be needed

@@ -1,0 +1,6 @@
+### MANAGED BY PUPPET ###
+---
+node: 
+  name: precise64-es-01
+path: 
+  data: /vagrant/es-data-es01

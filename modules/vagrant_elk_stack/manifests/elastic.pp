@@ -2,6 +2,7 @@ class vagrant_elk_stack::elastic{
 #ELASTICSEARCH setup
 #add elasticsearch 1.3 repo
 include apt
+
 apt::source { 'elasticsearch':
   location    => 'http://packages.elasticsearch.org/elasticsearch/1.3/debian',
   release     => 'stable',
@@ -18,12 +19,10 @@ class { 'elasticsearch':
   status       => 'enabled',  #make sure the service is started
   #datadir => '/var/lib/elasticsearch-data',      #global data dir (rather use instance dir)
 } -> 
-
 service { 'elasticsearch': 
   ensure => 'running',
   enable => true, 
 }
-
 
 #install modules
 elasticsearch::plugin{'lmenezes/elasticsearch-kopf':
@@ -35,8 +34,8 @@ elasticsearch::plugin{'royrusso/elasticsearch-HQ':
   instances => 'es-01',
 }
 elasticsearch::plugin{'mobz/elasticsearch-head':
-      module_dir => 'head',
-      instances => 'es-01',
+  module_dir => 'head',
+  instances => 'es-01',
 }
 
 #add clients
@@ -44,7 +43,8 @@ elasticsearch::plugin{'mobz/elasticsearch-head':
 
 ##basic instance
 elasticsearch::instance { 'es-01':
-  datadir => '/vagrant/es-data-es01'
+  datadir => '/es-index/es-01',
+  #config  => { 'node.name' => 'es-01' },
 }
 
 }#END
