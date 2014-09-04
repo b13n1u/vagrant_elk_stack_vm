@@ -38,6 +38,7 @@ LS_OPEN_FILES=16384
 LS_NICE=19
 LS_OPTS=""
 GEM_HOME="/opt/logstash/vendor/bundle/jruby/1.9/"     #WoA
+
 [ -r /etc/default/$name ] && . /etc/default/$name
 [ -r /etc/sysconfig/$name ] && . /etc/sysconfig/$name
 
@@ -55,10 +56,10 @@ start() {
   ulimit -n ${LS_OPEN_FILES}
 
   # Run the program!
-  #yaa! sure this ain't working man ! 
-  
+  #bug https://github.com/elasticsearch/logstash/issues/1289 
+ 
 #  nice -n ${LS_NICE} 
-   
+
 #   chroot --userspec $LS_USER:$LS_GROUP / sh -c "
 #    cd $LS_HOME
 #    ulimit -n ${LS_OPEN_FILES}
@@ -66,7 +67,7 @@ start() {
 #  " > "${LS_LOG_DIR}/$name.stdout" 2> "${LS_LOG_DIR}/$name.err"  # & removed some kind of a bug 
  
  #WoA
-/usr/bin/java -Djava.io.tmpdir=/var/lib/logstash -Xmx500m -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -Djava.awt.headless=true -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -jar /opt/logstash/vendor/jar/jruby-complete-1.7.11.jar  -I/opt/logstash/lib /opt/logstash/lib/logstash/runner.rb agent -f /etc/logstash/conf.d -l /var/log/logstash/logstash.log
+GEM_HOME="/opt/logstash/vendor/bundle/jruby/1.9/" /usr/bin/java -Djava.io.tmpdir=/var/lib/logstash -Xmx500m -XX:+UseParNewGC -XX:+UseConcMarkSweepGC -Djava.awt.headless=true -XX:CMSInitiatingOccupancyFraction=75 -XX:+UseCMSInitiatingOccupancyOnly -jar /opt/logstash/vendor/jar/jruby-complete-1.7.11.jar -I /opt/logstash/lib /opt/logstash/lib/logstash/runner.rb agent -f /etc/logstash/conf.d -l /var/log/logstash/logstash.log
 
 
   # Generate the pidfile from here. If we instead made the forked process
