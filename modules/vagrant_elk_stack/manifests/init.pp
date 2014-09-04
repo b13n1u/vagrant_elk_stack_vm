@@ -6,6 +6,11 @@ include vagrant_elk_stack::logst
 include vagrant_elk_stack::kiban
 include apt 
 
+class { 'timezone':
+    timezone => 'Europe/Warsaw',
+}
+
+
 #pkgs which may be needed
 $basic_pkgs = [ "screen", "strace", "sudo", "htop", "vim", "python-pip", "apache2", "curl", "tmux" ]
 #"libaugeas-ruby", "augeas-tools", "libaugeas-dev" ]
