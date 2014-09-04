@@ -14,10 +14,10 @@ apt::source { 'logstash':
 
 class { 'logstash': 
 #  version => '1.4.2-1-2c0f5a1',
-  status  => 'enabled',
+  status            => 'enabled',
   restart_on_change => false,    #Under normal circumstances a modification to the Logstash configuration will trigger a restart of the service.
-  install_contrib => true,      #install contrib plugins
-#  init_defaults_file => 'puppet:///modules/vagrant_elk_stack/logstash'
+  install_contrib   => true,      #install contrib plugins
+  init_defaults_file => 'puppet:///modules/vagrant_elk_stack/logstash'
   
 }
 
@@ -32,7 +32,12 @@ logstash::configfile { 'filter_conf':
 #   content => template("vagrant_elk_stack/filter.conf"),     #stupid bug in module !!
    order  => 20
  }
- 
+
+
+logstash::patternfile { 'patterns_conf':
+   source => 'puppet:///modules/vagrant_elk_stack/patterns.conf'
+ }
+
 logstash::configfile { 'output_conf':
   source => 'puppet:///modules/vagrant_elk_stack/output.conf',
 #   content => template("vagrant_elk_stack/output.conf"),     #stupid bug in module !!
