@@ -1,0 +1,110 @@
+Jul 14 17:20:01 wro-virtpc02-tps01 rsyslogd: [origin software="rsyslogd" swVersion="5.8.10" x-pid="880" x-info="http://www.rsyslog.com"] rsyslogd was HUPed
+Jul 15 10:34:59 wro-virtpc02-tps01 kernel: Changing capacity of (202, 0) to 20971520 sectors
+Jul 15 10:34:59 wro-virtpc02-tps01 kernel: Changing capacity of (202, 0) to 20971520 sectors
+Jul 15 10:34:59 wro-virtpc02-tps01 kernel: Changing capacity of (202, 16) to 209715200 sectors
+Jul 15 14:45:11 wro-virtpc02-tps01 kernel: Changing capacity of (202, 0) to 20971520 sectors
+Jul 15 14:45:11 wro-virtpc02-tps01 kernel: Changing capacity of (202, 0) to 20971520 sectors
+Jul 15 14:45:11 wro-virtpc02-tps01 kernel: Changing capacity of (202, 16) to 209715200 sectors
+Jul 17 11:33:28 wro-virtpc02-tps01 kernel: Changing capacity of (202, 0) to 20971520 sectors
+Jul 17 11:33:28 wro-virtpc02-tps01 kernel: Changing capacity of (202, 0) to 20971520 sectors
+Jul 17 11:33:28 wro-virtpc02-tps01 kernel: Changing capacity of (202, 16) to 209715200 sectors
+
+
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: registered taskstats version 1
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: XENBUS: Device with no driver: device/vbd/51728
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: XENBUS: Device with no driver: device/vbd/51712
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: XENBUS: Device with no driver: device/vif/0
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: drivers/rtc/hctosys.c: unable to open rtc device (rtc0)
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Initalizing network drop monitor service
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Freeing unused kernel memory: 1276k freed
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Write protecting the kernel read-only data: 10240k
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Freeing unused kernel memory: 800k freed
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Freeing unused kernel memory: 1588k freed
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: dracut: dracut-004-335.el6
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: dracut: rd_NO_LUKS: removing cryptoluks activation
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: device-mapper: uevent: version 1.0.3
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: device-mapper: ioctl: 4.24.6-ioctl (2013-01-15) initialised: dm-devel@redhat.com
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: udev: starting version 147
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: dracut: Starting plymouth daemon
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: dracut: rd_NO_MD: removing MD RAID activation
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: xlblk_init: register_blkdev major: 202
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: blkfront: xvdb: barriers disabled
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: xvdb: unknown partition table
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Changing capacity of (202, 16) to 209715200 sectors
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: xvdb: detected capacity change from 0 to 107374182400
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: blkfront: xvda: barriers disabled
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: xvda: xvda1 xvda2
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Changing capacity of (202, 0) to 20971520 sectors
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: xvda: detected capacity change from 0 to 10737418240
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: dracut: Scanning devices xvda2 xvdb  for LVM logical volumes VolGroup/lv_swap VolGroup/lv_root
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: dracut: inactive '/dev/vg_data/lv_data' [100.00 GiB] inherit
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: dracut: inactive '/dev/VolGroup/lv_root' [8.51 GiB] inherit
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: dracut: inactive '/dev/VolGroup/lv_swap' [1.00 GiB] inherit
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: EXT4-fs (dm-0): INFO: recovery required on readonly filesystem
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: EXT4-fs (dm-0): write access will be enabled during recovery
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: EXT4-fs (dm-0): recovery complete
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: EXT4-fs (dm-0): mounted filesystem with ordered data mode. Opts:
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: dracut: Mounted root filesystem /dev/mapper/VolGroup-lv_root
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: dracut: Loading SELinux policy
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: type=1403 audit(1409232456.607:2): policy loaded auid=4294967295 ses=4294967295
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: dracut:
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: dracut: Switching root
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: udev: starting version 147
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Initialising Xen virtual ethernet driver.
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: EXT4-fs (xvda1): mounted filesystem with ordered data mode. Opts:
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: EXT4-fs (dm-2): mounted filesystem with ordered data mode. Opts:
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Adding 1048568k swap on /dev/mapper/VolGroup-lv_swap.  Priority:-1 extents:1 across:1048568k SS
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: NET: Registered protocol family 10
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: lo: Disabled Privacy Extensions
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: ip6_tables: (C) 2000-2006 Netfilter Core Team
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: nf_conntrack version 0.5.0 (16384 buckets, 65536 max)
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: ip_tables: (C) 2000-2006 Netfilter Core Team
+
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel:  bootmap [000000000003c000 -  000000000005bfff] pages 20
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: (7 early reservations) ==> bootmem [0000000000 - 0100000000]
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel:  #0 [0000000000 - 0000001000]   BIOS data page ==> [0000000000 - 0000001000]
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel:  #1 [00053cf000 - 00053fe000]   XEN PAGETABLES ==> [00053cf000 - 00053fe000]
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel:  #2 [0000006000 - 0000008000]       TRAMPOLINE ==> [0000006000 - 0000008000]
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel:  #3 [0001000000 - 000201faa4]    TEXT DATA BSS ==> [0001000000 - 000201faa4]
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel:  #4 [0002040000 - 0004bcc000]          RAMDISK ==> [0002040000 - 0004bcc000]
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel:  #5 [0004bcc000 - 00053cf000]   XEN START INFO ==> [0004bcc000 - 00053cf000]
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel:  #6 [0000100000 - 00008d3000]          PGTABLE ==> [0000100000 - 00008d3000]
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Reserving 129MB of memory at 96MB for crashkernel (System RAM: 4096MB)
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Zone PFN ranges:
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel:  DMA      0x00000001 -> 0x00001000
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel:  DMA32    0x00001000 -> 0x00100000
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel:  Normal   0x00100000 -> 0x00100000
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Movable zone start PFN for each node
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: early_node_map[2] active PFN ranges
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel:    0: 0x00000001 -> 0x000000a0
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel:    0: 0x00000100 -> 0x00100000
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: SFI: Simple Firmware Interface v0.7 http://simplefirmware.org
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: SMP: Allowing 2 CPUs, 0 hotplug CPUs
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: No local APIC present
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: APIC: disable apic facility
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: PM: Registered nosave memory: 00000000000a0000 - 0000000000100000
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: PCI: Warning: Cannot find a gap in the 32bit address range
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: PCI: Unassigned devices with 32bit resource registers may break!
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Allocating PCI resources starting at 100100000 (gap: 100100000:400000)
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Booting paravirtualized kernel on Xen
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Xen version: 4.1.5 (preserve-AD)
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: NR_CPUS:4096 nr_cpumask_bits:2 nr_cpu_ids:2 nr_node_ids:1
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: PERCPU: Embedded 31 pages/cpu @ffff880005434000 s94872 r8192 d23912 u126976
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: pcpu-alloc: s94872 r8192 d23912 u126976 alloc=31*4096
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: pcpu-alloc: [0] 0 [0] 1
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Xen: using vcpu_info placement
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Built 1 zonelists in Node order, mobility grouping on.  Total pages: 1032137
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Policy zone: DMA32
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Kernel command line: ro root=/dev/mapper/VolGroup-lv_root rd_NO_LUKS LANG=en_US.UTF-8 rd_NO_MD console=hvc0  KEYTABLE=us rd_LVM_LV=VolGroup/lv_swap SYSFONT=latarcyrheb-sun16 crashkernel=129M@0M rd_LVM_LV=VolGroup/lv_root rd_NO_DM rhgb quiet graphical utf8
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: PID hash table entries: 4096 (order: 3, 32768 bytes)
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Checking aperture...
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: No AGP bridge found
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Memory: 3926108k/4194304k available (5325k kernel code, 388k absent, 267808k reserved, 7013k data, 1276k init)
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Hierarchical RCU implementation.
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: NR_IRQS:33024 nr_irqs:288
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: Console: colour dummy device 80x25
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: console [tty0] enabled
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: console [hvc0] enabled
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: allocated 16777216 bytes of page_cgroup
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: please try 'cgroup_disable=memory' option if you don't want memory cgroups
+Aug 28 15:27:48 wro-virtpc02-tps01 kernel: installing Xen timer for CPU 0
